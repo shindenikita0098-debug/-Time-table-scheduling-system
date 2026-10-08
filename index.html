@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table Scheduling System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Time Table Scheduling System</h1>
+    <p>Education & College Management</p>
+</header>
+
+<nav>
+    <a href="#home">🏠 Home</a>
+    <a href="#login">👨‍💼 Admin Login</a>
+    <a href="#teachers">👩‍🏫 Teachers</a>
+    <a href="#subjects">📚 Subjects</a>
+    <a href="#classes">🏫 Classes</a>
+    <a href="#rooms">🚪 Rooms</a>
+    <a href="#slots">⏰ Time Slots</a>
+    <a href="#generate">⚙️ Generate Timetable</a>
+    <a href="#timetable">📅 View Timetable</a>
+</nav>
+
+<section id="home" class="hero">
+    <h2>Welcome to Time Table Scheduling System</h2>
+    <p>Create and manage college timetables easily.</p>
+    <button onclick="showSection('login')">Admin Login</button>
+</section>
+
+
+<!-- ADMIN LOGIN -->
+
+<section id="login" class="section">
+    <h2>👨‍💼 Admin Login</h2>
+
+    <div class="login-box">
+
+        <input type="text" id="username"
+               placeholder="Enter Username">
+
+        <input type="password" id="password"
+               placeholder="Enter Password">
+
+        <button onclick="login()">Login</button>
+
+        <p id="loginMessage"></p>
+
+    </div>
+</section>
+
+
+<!-- TEACHERS -->
+
+<section id="teachers" class="section">
+
+    <h2>👩‍🏫 Add Teachers</h2>
+
+    <input type="text" id="teacherName"
+           placeholder="Enter Teacher Name">
+
+    <input type="text" id="teacherId"
+           placeholder="Enter Teacher ID">
+
+    <button onclick="addTeacher()">Add Teacher</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Teacher ID</th>
+                <th>Teacher Name</th>
+            </tr>
+        </thead>
+
+        <tbody id="teacherTable">
+        </tbody>
+    </table>
+
+</section>
+
+
+<!-- SUBJECTS -->
+
+<section id="subjects" class="section">
+
+    <h2>📚 Add Subjects</h2>
+
+    <input type="text" id="subjectName"
+           placeholder="Enter Subject Name">
+
+    <input type="text" id="subjectCode"
+           placeholder="Enter Subject Code">
+
+    <button onclick="addSubject()">Add Subject</button>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Subject Code</th>
+                <th>Subject Name</th>
+            </tr>
+        </thead>
+
+        <tbody id="subjectTable">
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<!-- CLASSES -->
+
+<section id="classes" class="section">
+
+    <h2>🏫 Add Class / Division</h2>
+
+    <input type="text" id="className"
+           placeholder="Example: SYBSc IT">
+
+    <input type="text" id="division"
+           placeholder="Example: A">
+
+    <button onclick="addClass()">Add Class</button>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Class</th>
+                <th>Division</th>
+            </tr>
+        </thead>
+
+        <tbody id="classTable">
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<!-- ROOMS -->
+
+<section id="rooms" class="section">
+
+    <h2>🚪 Add Rooms</h2>
+
+    <input type="text" id="roomName"
+           placeholder="Enter Room Name">
+
+    <button onclick="addRoom()">Add Room</button>
+
+    <ul id="roomList"></ul>
+
+</section>
+
+
+<!-- TIME SLOTS -->
+
+<section id="slots" class="section">
+
+    <h2>⏰ Add Time Slots</h2>
+
+    <input type="text" id="timeSlot"
+           placeholder="Example: 09:00 - 10:00">
+
+    <button onclick="addSlot()">Add Time Slot</button>
+
+    <ul id="slotList"></ul>
+
+</section>
+
+
+<!-- GENERATE -->
+
+<section id="generate" class="section">
+
+    <h2>⚙️ Generate Timetable</h2>
+
+    <button onclick="generateTimetable()">
+        Generate Timetable
+    </button>
+
+    <p id="generateMessage"></p>
+
+</section>
+
+
+<!-- TIMETABLE -->
+
+<section id="timetable" class="section">
+
+    <h2>📅 View Timetable</h2>
+
+    <div id="timetableResult"></div>
+
+    <button onclick="window.print()">
+        🖨️ Print Timetable
+    </button>
+
+</section>
+
+
+<footer>
+
+    <p>
+        Time Table Scheduling System © 2026
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
